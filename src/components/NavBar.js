@@ -38,10 +38,10 @@ export const NavBar = () => {
         <span className='navbar-toggler-icon'></span>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home" className={activeLink==='home' ? 'active navbar-link':'navbar-link'} onClick={()=> navigate('/')}>Home</Nav.Link>
-            <Nav.Link href="#Employee" className={activeLink==='employee' ? 'active navbar-link':'navbar-link'} onClick={()=> navigate('./Employee')}>Employee</Nav.Link>
-            <Nav.Link href="#hike_pred" className={activeLink==='hike_pred' ? 'active navbar-link':'navbar-link'} onClick={()=> onUpdateActiveLink('hike_pred')}>Hike Predict</Nav.Link>
-            <Nav.Link href="#review" className={activeLink==='review' ? 'active navbar-link':'navbar-link'} onClick={()=> onUpdateActiveLink('review')}>Sprint Review</Nav.Link>
+            <Nav.Link className={activeLink==='home' ? 'active navbar-link':'navbar-link'} onClick={()=> navigate('/')}>Home</Nav.Link>
+            <Nav.Link className={activeLink==='employee' ? 'active navbar-link':'navbar-link'} onClick={()=> navigate('/Employee')}>Employee</Nav.Link>
+            <Nav.Link className={activeLink==='hike_pred' ? 'active navbar-link':'navbar-link'} onClick={()=> onUpdateActiveLink('hike_pred')}>Hike Predict</Nav.Link>
+            <Nav.Link className={activeLink==='review' ? 'active navbar-link':'navbar-link'} onClick={()=> navigate('/sprintReview')}>Sprint Review</Nav.Link>
           </Nav>
           <span className='navbar-text'>
             <div className='social-icon'>
