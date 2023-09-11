@@ -268,3 +268,10 @@ height: 2px;
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 border-color: transparent;
 }
+
+.customPadding {
+  padding: 0 1rem;
+}
+.arrow {
+  transform: translateY(-1px);
+}
