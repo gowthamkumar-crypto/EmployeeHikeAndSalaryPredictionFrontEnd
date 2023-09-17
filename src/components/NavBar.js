@@ -40,7 +40,7 @@ export const NavBar = () => {
           <Nav className="me-auto">
             <Nav.Link className={activeLink==='home' ? 'active navbar-link':'navbar-link'} onClick={()=> navigate('/')}>Home</Nav.Link>
             <Nav.Link className={activeLink==='employee' ? 'active navbar-link':'navbar-link'} onClick={()=> navigate('/Employee')}>Employee</Nav.Link>
-            <Nav.Link className={activeLink==='hike' ? 'active navbar-link':'navbar-link'} onClick={()=> onUpdateActiveLink('/hikePredict')}>Hike Predict</Nav.Link>
+            <Nav.Link className={activeLink==='hike' ? 'active navbar-link':'navbar-link'} onClick={()=> navigate('/hikePredict')}>Hike Predict</Nav.Link>
             <Nav.Link className={activeLink==='review' ? 'active navbar-link':'navbar-link'} onClick={()=> navigate('/sprintReview')}>Sprint Review</Nav.Link>
           </Nav>
           <span className='navbar-text'>

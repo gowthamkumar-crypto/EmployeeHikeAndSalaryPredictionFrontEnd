@@ -15,7 +15,6 @@ export const Employee = () =>{
             <NavBar></NavBar>
             <div style={{display:'flex', marginTop:'15%', justifyContent:'space-evenly'}}>
                 <button type="button" className="btn btn-primary" onClick={handleButtonClick}>Add New Employee</button>
-                <button type="button" className="btn btn-primary">Edit Existing Employee</button>
             </div>
         </div>
     )
