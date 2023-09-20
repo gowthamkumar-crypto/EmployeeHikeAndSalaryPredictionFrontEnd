@@ -7,13 +7,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import SprintReview from './components/SprintReview';
 import HikePredict from './components/HikePredict';
+import Login from './components/Login';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes >
-          <Route path='/' element={<NavBar/>}/>
+        <Route index path='/' element={<Login />} />
+          <Route path='/home' element={<NavBar/>}/>
           <Route path='/Employee' element={<Employee/>}/>
           <Route path='/NewEmployee' element={<NewEmployee/>}/>
           <Route path='/sprintReview' element={<SprintReview />} />

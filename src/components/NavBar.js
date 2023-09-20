@@ -10,7 +10,6 @@ import navIcon3 from '../assets/img/nav-icon3.svg';
 // import { Employee } from './Employee';
 
 export const NavBar = () => {
-    const [activeLink, setActiveLink] = useState('home');
     const [scrolled,seScrolled] = useState(false);
     const navigate = useNavigate();
     useEffect(()=>{
@@ -25,9 +24,7 @@ export const NavBar = () => {
         return () => window.removeEventListener("scroll",onScroll)
     },[])
 
-    const onUpdateActiveLink = (value) => {
-        setActiveLink(value)
-    }
+
   return (
     <Navbar expand="lg" className={scrolled ? "scrolled":""}>
       <Container>
@@ -38,10 +35,10 @@ export const NavBar = () => {
         <span className='navbar-toggler-icon'></span>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link className={activeLink==='home' ? 'active navbar-link':'navbar-link'} onClick={()=> navigate('/')}>Home</Nav.Link>
-            <Nav.Link className={activeLink==='employee' ? 'active navbar-link':'navbar-link'} onClick={()=> navigate('/Employee')}>Employee</Nav.Link>
-            <Nav.Link className={activeLink==='hike' ? 'active navbar-link':'navbar-link'} onClick={()=> navigate('/hikePredict')}>Hike Predict</Nav.Link>
-            <Nav.Link className={activeLink==='review' ? 'active navbar-link':'navbar-link'} onClick={()=> navigate('/sprintReview')}>Sprint Review</Nav.Link>
+            <Nav.Link className='navbar-link' onClick={()=> navigate('/home')}>Home</Nav.Link>
+            <Nav.Link className='navbar-link' onClick={()=> navigate('/Employee')}>Employee</Nav.Link>
+            <Nav.Link className='navbar-link' onClick={()=> navigate('/hikePredict')}>Hike Predict</Nav.Link>
+            <Nav.Link className='navbar-link' onClick={()=> navigate('/sprintReview')}>Sprint Review</Nav.Link>
           </Nav>
           <span className='navbar-text'>
             <div className='social-icon'>
