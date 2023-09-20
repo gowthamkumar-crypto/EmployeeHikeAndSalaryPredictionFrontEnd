@@ -8,6 +8,7 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import SprintReview from './components/SprintReview';
 import HikePredict from './components/HikePredict';
 import Login from './components/Login';
+import Home from './components/Home';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <BrowserRouter>
         <Routes >
         <Route index path='/' element={<Login />} />
-          <Route path='/home' element={<NavBar/>}/>
+          <Route path='/home' element={<Home />}/>
           <Route path='/Employee' element={<Employee/>}/>
           <Route path='/NewEmployee' element={<NewEmployee/>}/>
           <Route path='/sprintReview' element={<SprintReview />} />

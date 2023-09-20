@@ -4,10 +4,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import { useEffect, useState } from 'react';
 import {useNavigate} from 'react-router-dom';
 import logo from '../assets/img/logo.svg';
-import navIcon1 from '../assets/img/nav-icon1.svg';
-import navIcon2 from '../assets/img/nav-icon2.svg';
-import navIcon3 from '../assets/img/nav-icon3.svg';
-// import { Employee } from './Employee';
 
 export const NavBar = () => {
     const [scrolled,seScrolled] = useState(false);
@@ -40,13 +36,7 @@ export const NavBar = () => {
             <Nav.Link className='navbar-link' onClick={()=> navigate('/hikePredict')}>Hike Predict</Nav.Link>
             <Nav.Link className='navbar-link' onClick={()=> navigate('/sprintReview')}>Sprint Review</Nav.Link>
           </Nav>
-          <span className='navbar-text'>
-            <div className='social-icon'>
-                <a href='#'><imag src={navIcon1} alt="" /></a>
-                <a href='#'><imag src={navIcon2} alt="" /></a>
-                <a href='#'><imag src={navIcon3} alt="" /></a>
-            </div>
-          </span>
+          <button class="btn" style={{border: '1px solid white', padding: '8px', color: 'white'}} onClick={() => navigate('/')}>Log Out</button>
         </Navbar.Collapse>
       </Container>
     </Navbar>

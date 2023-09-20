@@ -117,9 +117,9 @@ const HikePredict = () => {
       <div class="row" style={{marginTop: '10px', marginLeft: '18%'}}>
         <button type="submit" class="btn" style={{background:"white",width:"21rem", marginLeft: '18%'}} onClick={hike} >Get Hike Prediction</button>
       </div>
-      <span className='salary-predicted-navbar-text'>
+      <span className='salary-predicted-navbar-text' style={{top: '-7%', right: '-3%', }}>
           {HikePrediction && <div className='salary-predicted-icon'>
-                <span>{HikePrediction}</span>
+                <span style={{width: '15rem', height: '15rem'}}>{HikePrediction}</span>
             </div>}
       </span>
       </>
