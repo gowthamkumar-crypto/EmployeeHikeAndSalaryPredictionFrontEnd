@@ -41,7 +41,6 @@ const SprintReview = () => {
     setData({
       ...data, [e.target.name]: e.target.value
     });
-    console.log(e.target.value)
     }
 
     const {empNameId, workingHours, jobInvolvement, overTime, assignedStoryPoints, spillOverStoryPoints, actualWorkingHours, clientRecognition, companyValues } = data;
