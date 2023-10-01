@@ -9,6 +9,7 @@ import HireEmployee from './components/HireEmployee';
 import HikePredict from './components/HikePredict';
 import Login from './components/Login';
 import Home from './components/Home';
+import EmployeeDelete from './components/EmployeeDelete';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path='/sprintReview' element={<SprintReview />} />
           <Route path='/hikePredict' element={<HikePredict />} />
           <Route path='/hireEmployee' element={<HireEmployee />} />
+          <Route path='/EmployeeDelete' element={<EmployeeDelete />} />
         </Routes>
       </BrowserRouter>
     </div>

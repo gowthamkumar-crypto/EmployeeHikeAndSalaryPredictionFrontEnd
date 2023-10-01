@@ -34,7 +34,7 @@ const Login = () => {
     return (
         <>
         <h1 style={{display: 'flex', justifyContent: 'center', marginTop: '30px'}}>Employee Salary Prediction Analytics</h1>
-        <div className="row" style={{position: 'absolute', top: '18rem', left: '45rem', background: 'white', width: '25%', borderRadius: '10px'}}>
+        <div className="row" style={{position: 'absolute', top: '18rem', left: '56rem', background: 'white', width: '25%', borderRadius: '10px'}}>
             <label style={{color: 'black', marginTop: '3rem'}}>Username</label>
             <input style={{width: '75%', margin: '0 20px 20px', color: 'black'}} type="username" name="username" onChange={onInputChange} value={username}></input>
             <label style={{color: 'black'}}>Password</label>

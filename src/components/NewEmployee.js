@@ -29,7 +29,8 @@ const { firstName, lastName, age, education, job, level, experience, email, gend
       }
       }
 
-    const predictSalary = () => {
+    const predictSalary = (e) => {
+        e.preventDefault()
         axios.post('http://127.0.0.1:5000/predict/salary', {
             Age:age,
             Education_Level:education,

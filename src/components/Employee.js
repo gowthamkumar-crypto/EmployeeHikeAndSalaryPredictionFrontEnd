@@ -11,6 +11,7 @@ export const Employee = () =>{
             <div style={{display:'flex', marginTop:'15%', justifyContent:'space-evenly'}}>
                 <button type="button" className="btn btn-primary" onClick={() => navigate('/NewEmployee')}>Add New Employee</button>
                 <button type="button" className="btn btn-primary" onClick={() => navigate('/HireEmployee')}>Hire New Employee</button>
+                <button type="button" className="btn btn-primary" onClick={() => navigate('/EmployeeDelete')}>Delete Employee</button>
             </div>
         </div>
     )

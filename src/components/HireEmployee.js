@@ -6,16 +6,16 @@ import { Autocomplete, TextField } from "@mui/material";
 const HireEmployee = () => {
     const [options, setOptions] = useState([]);
     const [data, setData] = useState({
-      cid: '243',
-      name: 'iui',
-      predictedSalary: '9090'
+      cid: '54',
+      name: 'gowtham kumar',
+      predictedSalary: '1200000'
     });
 
     const {cid, name, predictedSalary } = data;
 
     const onInputChange = ( event , value) => {;
         if(value.length > 2){
-           axios.post(`http://127.0.0.1:5000/sprint/review/search/${value}`).then((res)=>{
+           axios.post(`http://127.0.0.1:5000/hire/search/${value}`).then((res)=>{
            if(res.data.length > 0){
              let modData = res.data.map((item,index)=>({
                label:item,id:index
@@ -64,6 +64,10 @@ const HireEmployee = () => {
             <input style={{width: '100%',  height: '4rem'}} disabled value={predictedSalary} />
             </div>
             }
+            <div class="col-4" style={{margin: '0 10px', color: 'black', width: '20rem'}}>
+                <label style={{color: 'white'}}>Final Salary</label>
+                <input type="number" class="form-control" name="finalSalary"  placeholder="Enter Finalized Salary" />
+            </div>
         </div>
         <div style={{position: 'relative', top: '32rem', marginLeft: '7rem'}}>
         <button type="button" className="btn btn-primary" onClick={() => {}} style={{fontSize: '1.5rem'}}>Submit</button>
