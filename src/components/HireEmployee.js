@@ -3,11 +3,12 @@ import { NavBar } from "./NavBar";
 import axios from "axios";
 import { Autocomplete, TextField } from "@mui/material";
 
+
 const HireEmployee = () => {
     const [options, setOptions] = useState([]);
     const [data, setData] = useState({
-      cid: '54',
-      name: 'gowtham kumar',
+      cid:'54',
+      name: 'gowtham',
       predictedSalary: '1200000'
     });
 
@@ -28,7 +29,8 @@ const HireEmployee = () => {
 
        const populateData = (e) => {
         e.preventDefault();
-        axios.post(`http://127.0.0.1:5000/sprint/review/search/${e.targetvalue}`).then((res)=>{
+        console.log(e.targetvalue)
+        axios.post(`http://127.0.0.1:5000/hire/cadidate/details/${e.targetvalue}`).then((res)=>{
           setData(res.data) 
           });
        }

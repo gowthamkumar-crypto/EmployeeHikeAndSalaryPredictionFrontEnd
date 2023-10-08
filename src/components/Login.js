@@ -24,8 +24,10 @@ const Login = () => {
         axios.post('http://127.0.0.1:5000/login', {
             username, password
         }).then((res) => {
-            if(res.status = 'SUCCESS')
-            navigate('/home');
+            if(res.data.status === 'SUCCESS') {
+                localStorage.setItem("allowedRoutes", res.data.permissions)
+                navigate('/home');
+            }
             else
             alert('login failed')
         })
